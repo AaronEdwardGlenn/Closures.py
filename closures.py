@@ -15,8 +15,8 @@ outer_func()
 # ok so the outter function is created which sets the message variable to hi. then we see the inner function prints that message. it returns itself invoked. let's now use this same code but not return that inner function invoked.
 
 
-def outer_func():
-    message = 'Hi'
+def outer_func(msg):
+    message = msg
 
     def inner_func():
         print(message)
@@ -24,4 +24,8 @@ def outer_func():
     return inner_func
 
 
-my_func = outer_func()
+hi_func = outer_func('HI')
+hello_func = outer_func('SUPPP')
+
+hi_func()
+hello_func()
